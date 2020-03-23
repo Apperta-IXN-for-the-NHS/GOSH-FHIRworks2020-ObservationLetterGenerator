@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <style>
+      body {
+        background-color: linen;
+      }
+      
+      h1 {
+        color: maroon;
+        margin-left: 40px;
+      }
+
+      container {
+        color: maroon;
+        margin-left: 40px;
+      }
+      </style>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+</head>
+<body>
+  <h1> Please choose Observations you would like to include in the report </h1>
+  <div class="container">
+        <form method = "post" action = "">
+                <table class="table table-bordered">
+                        <thead>
+                                {% for observation in observations %}
+                                <tr>
+                                      <td><input id="{{ observation }}" type="checkbox" name="{{ observation }}">{{ observation }}</td>
+                                  
+                                </tr>
+                                {% endfor %}
+                              </thead>
+                </table>
+                <div class="form-group col-md-1">
+                  <input type="submit" value="Submit" class="btn btn-info"/>
+                </div>
+              </form>
+   
+  </div>
